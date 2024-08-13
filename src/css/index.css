@@ -1,6 +1,17 @@
 /* ==================== GOOGLE FONTS ===================== */
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
+/* ==================== CSS VARIABLES ===================== */
+:root {
+    --main-color: #4adf86;
+    --second-color: #d5d4d8;
+    --white-color: #fff;
+    --bg-card-dark: #1f2937;
+    --bg-card-light: #ecfdf5;
+    --bg-pass-btn: #273549;
+    --divide-color: #2f3e53;
+}
+
 /* ==================== CSS RESET ===================== */
 * {
     margin: 0;

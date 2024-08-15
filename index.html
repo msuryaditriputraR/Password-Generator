@@ -20,18 +20,19 @@
   <div class="container">
     <header>
       <input type="color" id="input-color">
-      <i class="ri-moon-fill"></i>
+      <label for="input-color" id="color" title="Button Color Theme">c</label>
+      <i class="ri-moon-fill" id="btn-theme" title="Button Theme"></i>
     </header>
     <main>
       <h1>Generate a <br><span>Random Password</span></h1>
-      <p>Never use an insecure password again.</p>
-      <button class="btn-generate">
+      <p class="desc">Never use an insecure password again.</p>
+      <button id="btn-generate">
         <i class="ri-key-fill"></i> Generate Password
       </button>
       <div class="result">
         <div class="password">
-          <p>>nfJjy!dDvR&ial</p>
-          <i class="ri-file-copy-line"></i>
+          <p id="password">>nfJjy!dDvR&ial</p>
+          <i class="ri-file-copy-line" id="btn-copy" title="Button Copy"></i>
         </div>
       </div>
     </main>

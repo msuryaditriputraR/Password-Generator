@@ -104,13 +104,13 @@ header {
 
 .result {
     border-top: 1px solid var(--divide-color-light);
-    padding-top: 1.5rem;
 }
 
 .password {
     background-color: var(--bg-pass-btn);
     color: #fff;
     padding: 0.5rem 1.5rem;
+    margin-top: 1.5rem;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;

@@ -185,6 +185,7 @@ footer :is(i, a) {
 }
 
 footer a {
+    font-weight: bold;
     text-decoration-style: dashed;
     text-underline-offset: 3px;
     transition: 0.3s;

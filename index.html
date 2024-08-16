@@ -26,9 +26,22 @@
     <main>
       <h1>Generate a <br><span>Random Password</span></h1>
       <p class="desc">Never use an insecure password again.</p>
-      <button id="btn-generate">
-        <i class="ri-key-fill"></i> Generate Password
-      </button>
+      <div class="act">
+        <button id="btn-generate">
+          <i class="ri-key-fill"></i> Generate Password
+        </button>
+        <div>
+          <input type="number" id="passwordLength" min="8" value="15" max="25">
+          <div class="checkboxes">
+            <input type="checkbox" id="number" checked>
+            <label for="number">Number</label>
+          </div>
+          <div class="checkboxes">
+            <input type="checkbox" id="symbol" checked>
+            <label for="symbol">Symbol</label>
+          </div>
+        </div>
+      </div>
       <div class="result">
 
       </div>

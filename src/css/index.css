@@ -30,7 +30,7 @@ body {
     background-color: #1c1c1c;
 }
 
-/* ==================== REUSABLE CLASS ===================== */
+/* ==================== REUSABLE PROPERTY ===================== */
 button,
 i,
 #color {
@@ -68,6 +68,12 @@ header {
 
 #btn-theme {
     cursor: pointer;
+    transition: all 0.3s;
+    color: var(--title-color-light);
+}
+
+#btn-theme:hover {
+    transform: rotate(45deg);
 }
 
 #color {
@@ -116,4 +122,31 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== DARK THEME ===================== */
+
+.dark .container {
+    background-color: var(--bg-container-dark);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dark h1 {
+    color: var(--title-color-dark);
+}
+
+.dark .desc {
+    color: var(--second-color-dark);
+}
+
+.dark .result {
+    border-color: var(--divide-color-dark);
+}
+
+.dark #btn-theme {
+    color: var(--title-color-dark);
+}
+
+.dark #color {
+    border-color: rgba(255, 255, 255, 0.5);
 }

@@ -19,3 +19,16 @@ btnTheme.addEventListener("click", () => {
         localStorage.setItem("darkTheme", true);
     }
 });
+
+/* ==================== CHANGE MAIN COLOR ===================== */
+const inputColor = document.getElementById("input-color");
+const root = document.documentElement;
+
+if (localStorage.getItem("mainColor")) {
+    root.style.setProperty("--main-color", localStorage.getItem("mainColor"));
+}
+
+inputColor.addEventListener("input", function () {
+    root.style.setProperty("--main-color", this.value);
+    localStorage.setItem("mainColor", this.value);
+});

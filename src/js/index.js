@@ -8,7 +8,7 @@ if (localStorage.getItem("darkTheme")) {
     btnTheme.className = "ri-moon-fill";
 }
 
-btnTheme.addEventListener("click", function () {
+btnTheme.addEventListener("click", () => {
     if (body.classList.contains("dark")) {
         body.classList.remove("dark");
         btnTheme.className = "ri-sun-fill";

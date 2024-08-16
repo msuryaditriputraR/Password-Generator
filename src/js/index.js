@@ -39,9 +39,10 @@ inputColor.addEventListener("input", function () {
 /* ==================== GENERATE PASSWORD ===================== */
 const btnGenerate = document.getElementById("btn-generate");
 const resultDiv = document.querySelector(".result");
+const passwordLength = document.getElementById("passwordLength");
 
 btnGenerate.addEventListener("click", () => {
-    const password = randomPassword();
+    const password = randomPassword(Number(passwordLength.value));
     const passwordDiv = passComponent(password);
 
     resultDiv.replaceChildren(passwordDiv);

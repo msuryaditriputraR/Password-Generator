@@ -184,6 +184,10 @@ header {
     color: var(--second-color-dark);
 }
 
+.dark .checkboxes {
+    color: var(--second-color-dark);
+}
+
 .dark .result {
     border-color: var(--divide-color-dark);
 }

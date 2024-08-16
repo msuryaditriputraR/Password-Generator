@@ -1,5 +1,8 @@
 /* ==================== DARK / LIGHT THEME ===================== */
 
+import passComponent from "./helper/passComponent.js";
+import randomPassword from "./helper/randomPassword.js";
+
 const body = document.body;
 const btnTheme = document.getElementById("btn-theme");
 
@@ -31,4 +34,15 @@ if (localStorage.getItem("mainColor")) {
 inputColor.addEventListener("input", function () {
     root.style.setProperty("--main-color", this.value);
     localStorage.setItem("mainColor", this.value);
+});
+
+/* ==================== GENERATE PASSWORD ===================== */
+const btnGenerate = document.getElementById("btn-generate");
+const resultDiv = document.querySelector(".result");
+
+btnGenerate.addEventListener("click", () => {
+    const password = randomPassword();
+    const passwordDiv = passComponent(password);
+
+    resultDiv.replaceChildren(passwordDiv);
 });

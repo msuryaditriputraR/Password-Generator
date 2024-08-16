@@ -40,11 +40,13 @@ inputColor.addEventListener("input", function () {
 const btnGenerate = document.getElementById("btn-generate");
 const resultDiv = document.querySelector(".result");
 const passwordLength = document.getElementById("passwordLength");
+const useNumber = document.getElementById("number");
 
 btnGenerate.addEventListener("click", () => {
-    const useNumber = document.getElementById("number").checked;
-
-    const act = { passwordLength: Number(passwordLength.value), useNumber };
+    const act = {
+        passwordLength: Number(passwordLength.value),
+        useNumber: useNumber.checked,
+    };
     const password = randomPassword(act);
     const passwordDiv = passComponent(password);
 

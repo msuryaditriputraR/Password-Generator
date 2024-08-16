@@ -99,10 +99,7 @@ export default function ({ passwordLength, useNumber }) {
 
     let i = 1;
 
-    if (!useNumber) {
-        characters.splice(52, 10);
-        console.log(characters);
-    }
+    if (!useNumber) characters.splice(52, 10);
 
     while (i <= passwordLength) {
         const index = roll(0, characters.length);

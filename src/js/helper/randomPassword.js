@@ -1,6 +1,6 @@
 import roll from "./roll.js";
 
-export default function ({ passwordLength, useNumber }) {
+export default function ({ passwordLength, useNumber, useSymbol }) {
     const characters = [
         "A",
         "B",
@@ -100,6 +100,7 @@ export default function ({ passwordLength, useNumber }) {
     let i = 1;
 
     if (!useNumber) characters.splice(52, 10);
+    if (!useSymbol) characters.splice(-29, 29);
 
     while (i <= passwordLength) {
         const index = roll(0, characters.length);

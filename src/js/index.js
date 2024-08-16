@@ -41,11 +41,13 @@ const btnGenerate = document.getElementById("btn-generate");
 const resultDiv = document.querySelector(".result");
 const passwordLength = document.getElementById("passwordLength");
 const useNumber = document.getElementById("number");
+const useSymbol = document.getElementById("symbol");
 
 btnGenerate.addEventListener("click", () => {
     const act = {
         passwordLength: Number(passwordLength.value),
         useNumber: useNumber.checked,
+        useSymbol: useSymbol.checked,
     };
     const password = randomPassword(act);
     const passwordDiv = passComponent(password);

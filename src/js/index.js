@@ -42,7 +42,10 @@ const resultDiv = document.querySelector(".result");
 const passwordLength = document.getElementById("passwordLength");
 
 btnGenerate.addEventListener("click", () => {
-    const password = randomPassword(Number(passwordLength.value));
+    const useNumber = document.getElementById("number").checked;
+
+    const act = { passwordLength: Number(passwordLength.value), useNumber };
+    const password = randomPassword(act);
     const passwordDiv = passComponent(password);
 
     resultDiv.replaceChildren(passwordDiv);

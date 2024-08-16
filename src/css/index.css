@@ -169,6 +169,32 @@ header {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* ==================== FOOTER ===================== */
+footer {
+    padding-top: 0.8rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--second-color-light);
+}
+
+footer :is(i, a) {
+    color: var(--main-color);
+}
+
+footer a {
+    text-decoration-style: dashed;
+    text-underline-offset: 3px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration-style: solid;
+    text-underline-offset: 1px;
+}
+
 /* ==================== DARK THEME ===================== */
 
 .dark .container {

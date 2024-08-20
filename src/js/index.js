@@ -42,15 +42,45 @@ const resultDiv = document.querySelector(".result");
 const passwordLength = document.getElementById("passwordLength");
 const useNumber = document.getElementById("number");
 const useSymbol = document.getElementById("symbol");
+const errorMessage = document.getElementById("error-message");
+
+const minPasswordLength = 8;
+const maxPasswordLength = 25;
 
 btnGenerate.addEventListener("click", () => {
-    const act = {
-        passwordLength: Number(passwordLength.value),
-        useNumber: useNumber.checked,
-        useSymbol: useSymbol.checked,
-    };
-    const password = randomPassword(act);
-    const passwordDiv = passComponent(password);
+    if (Number(passwordLength.value) > maxPasswordLength) {
+        setError(`Password Length must not more then ${maxPasswordLength}`);
 
-    resultDiv.replaceChildren(passwordDiv);
+        resultDiv.replaceChildren("");
+    } else if (Number(passwordLength.value) < minPasswordLength) {
+        setError(`Password Length must not less then ${minPasswordLength}`);
+
+        resultDiv.replaceChildren("");
+    } else {
+        removeError();
+
+        const act = {
+            passwordLength: Number(passwordLength.value),
+            useNumber: useNumber.checked,
+            useSymbol: useSymbol.checked,
+        };
+        const password = randomPassword(act);
+        const passwordDiv = passComponent(password);
+
+        resultDiv.replaceChildren(passwordDiv);
+    }
 });
+
+function setError(message) {
+    errorMessage.textContent = message;
+
+    passwordLength.style.color = "#ff0000";
+    passwordLength.style.borderColor = "#ff0000";
+}
+
+function removeError() {
+    errorMessage.textContent = "";
+
+    passwordLength.style.color = "var(--main-color)";
+    passwordLength.style.borderColor = "var(--main-color)";
+}

@@ -81,6 +81,6 @@ function setError(message) {
 function removeError() {
     errorMessage.textContent = "";
 
-    passwordLength.style.color = "var(--main-color)";
+    passwordLength.style.color = "initial";
     passwordLength.style.borderColor = "var(--main-color)";
 }
